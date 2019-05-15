@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-15T13:55:58+08:00
+
+====== Linux清理内核 ======
+Created Wednesday 15 May 2019
+
+1.查看系统存在的内核 
+dpkg --get-selections | grep linux 
+2.显示当前的内核 
+uname -a 
+3.升级内核 
+sudo apt-get dist-upgrade 
+4.删除内核 
+带有image的文件是需要删除的，一定要写全版本等字符。其他相关文件会自动删除。 
+sudo apt-get remove --purge linux-image-2.6.32-24-generic 
+5.删除内核 
+sudo apt-get remove --purge linux-headers-2.6.32-24-generic 
+6.更新menu.list 
+sudo update-grub 
+7.系统垃圾清理 
+sudo apt-get autoclean 清理旧版本的软件缓存 
+sudo apt-get clean 清理所有软件缓存 
+sudo apt-get autoremove 删除系统不再使用的孤立软件 
+8.包管理的临时文件目录: 
+/var/cache/apt/archives 
+没有下载完的在 
+/var/cache/apt/archives/partial 
+9.清理opera firefox的缓存文件： 
+ls ~/.opera/cache4 
+ls ~/.mozilla/firefox/*.default/Cache 
+
+1,查看一下当前内核版本：uname -a 
+2.查看一下当前系统内的所有内核文件：dpkg --get-selections|grep linux 
+3.删除内核文件： 
+sudo apt-get remove linux-headers-2.6.32-24-generic 
+sudo apt-get remove linux-headers-2.6.32-24 
+sudo apt-get remove linux-image-2.6.35-22-generic 
