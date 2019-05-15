@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2019-05-15T19:43:45+08:00
-
-====== Git基本设置 ======
-Created Wednesday 15 May 2019
-
