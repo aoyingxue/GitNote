@@ -256,7 +256,7 @@ x,\quad x>0
 \end{cases}
 里面用到了 \(\leq\) 符号，下一章会介绍常用数学符号。
 
-##### 2.2 数组的其他使用
+#### 2.2 数组的其他使用
 ##### 2.2.1 划线
 $$
 \left(\begin{array}{|c|c|}
@@ -265,13 +265,13 @@ $$
 3 & 4
 \end{array}\right)
 $$
-复制代码
+
 \left( \begin{array}{|c|c|}
 1 & \ldots \\\\
 \hline
 \vdots & \ddots 
 \end{array} \right)
-2.2.2 制表
+##### 2.2.2 制表
 $$
 \begin{array}{|c|c|}
 \hline
@@ -281,7 +281,7 @@ $$
 \hline
 \end{array}
 $$
-复制代码
+
 \begin{array}{|c|c|}
 \hline
 {1111111111} & 2 \\\\
@@ -291,66 +291,13 @@ $$
 \end{array}
 可以看到，其实其他很多东西都可以很灵活的表达出来。碰到其他有趣的我会继续写出来的。
 
-3. 常用数学符号
+### 3. 常用数学符号
 这里提供一个文档下载，如果上面的链接失效，也可以到我的 GitHub 下载 pdf 版。下面举几个例子。
 
-3.1 希腊字母
-$$
-\begin{array}{|c|c|c|c|c|c|c|c|}
-\hline
-{\alpha} & {\backslash alpha} & {\theta} & {\backslash theta} & {o} & {o} & {\upsilon} & {\backslash upsilon} \\\\
-\hline
-{\beta} & {\backslash beta} & {\vartheta} & {\backslash vartheta} & {\pi} & {\backslash pi} & {\phi} & {\backslash phi} \\\\
-\hline
-{\gamma} & {\backslash gamma} & {\iota} & {\backslash iota} & {\varpi} & {\backslash varpi} & {\varphi} & {\backslash varphi} \\\\
-\hline
-{\delta} & {\backslash delta} & {\kappa} & {\backslash kappa} & {\rho} & {\backslash rho} & {\chi} & {\backslash chi} \\\\
-\hline
-{\epsilon} & {\backslash epsilon} & {\lambda} & {\backslash lambda} & {\varrho} & {\backslash varrho} & {\psi} & {\backslash psi} \\\\
-\hline
-{\varepsilon} & {\backslash varepsilon} & {\mu} & {\backslash mu} & {\sigma} & {\backslash sigma} & {\omega} & {\backslash omega} \\\\
-\hline
-{\zeta} & {\backslash zeta} & {\nu} & {\backslash nu} & {\varsigma} & {\backslash varsigma} & {} & {} \\\\
-\hline
-{\eta} & {\backslash eta} & {\xi} & {\backslash xi} & {\tau} & {\backslash tau} & {} & {} \\\\
-\hline
-{\Gamma} & {\backslash Gamma} & {\Lambda} & {\backslash Lambda} & {\Sigma} & {\backslash Sigma} & {\Psi} & {\backslash Psi} \\\\
-\hline
-{\Delta} & {\backslash Delta} & {\Xi} & {\backslash Xi} & {\Upsilon} & {\backslash Upsilon} & {\Omega} & {\backslash Omega} \\\\
-\hline
-{\Omega} & {\backslash Omega} & {\Pi} & {\backslash Pi} & {\Phi} & {\backslash Phi} & {} & {} \\\\
-\hline
-\end{array}
-$$
-复制代码
-\begin{array}{|c|c|c|c|c|c|c|c|}
-\hline
-{\alpha} & {\backslash alpha} & {\theta} & {\backslash theta} & {o} & {o} & {\upsilon} & {\backslash upsilon} \\\\
-\hline
-{\beta} & {\backslash beta} & {\vartheta} & {\backslash vartheta} & {\pi} & {\backslash pi} & {\phi} & {\backslash phi} \\\\
-\hline
-{\gamma} & {\backslash gamma} & {\iota} & {\backslash iota} & {\varpi} & {\backslash varpi} & {\varphi} & {\backslash varphi} \\\\
-\hline
-{\delta} & {\backslash delta} & {\kappa} & {\backslash kappa} & {\rho} & {\backslash rho} & {\chi} & {\backslash chi} \\\\
-\hline
-{\epsilon} & {\backslash epsilon} & {\lambda} & {\backslash lambda} & {\varrho} & {\backslash varrho} & {\psi} & {\backslash psi} \\\\
-\hline
-{\varepsilon} & {\backslash varepsilon} & {\mu} & {\backslash mu} & {\sigma} & {\backslash sigma} & {\omega} & {\backslash omega} \\\\
-\hline
-{\zeta} & {\backslash zeta} & {\nu} & {\backslash nu} & {\varsigma} & {\backslash varsigma} & {} & {} \\\\
-\hline
-{\eta} & {\backslash eta} & {\xi} & {\backslash xi} & {\tau} & {\backslash tau} & {} & {} \\\\
-\hline
-{\Gamma} & {\backslash Gamma} & {\Lambda} & {\backslash Lambda} & {\Sigma} & {\backslash Sigma} & {\Psi} & {\backslash Psi} \\\\
-\hline
-{\Delta} & {\backslash Delta} & {\Xi} & {\backslash Xi} & {\Upsilon} & {\backslash Upsilon} & {\Omega} & {\backslash Omega} \\\\
-\hline
-{\Omega} & {\backslash Omega} & {\Pi} & {\backslash Pi} & {\Phi} & {\backslash Phi} & {} & {} \\\\
-\hline
-\end{array}
-写太累了😂😂😂。。。其他的详见 PDF。
+#### 3.1 希腊字母
 
-4. 总结
+
+### 4. 总结
 通过这样梳理一下基本的公式都能插入了，而且也会如何查资料。对于自己日后学习 LaTeX 写论文有很大帮助。以下建议带有很强的主观性，仅供参考。
 
 公式一律使用另取一行，并且上下都空一行
