@@ -4,4 +4,6 @@ Creation-Date: 2019-05-15T13:56:35+08:00
 
 ====== 安装gnome-tweak ======
 Created Wednesday 15 May 2019
+
 sudo apt install gnome-tweak-tool
+sudo apt install gnome-shell-extensions
