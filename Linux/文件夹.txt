@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-05-15T21:27:02+08:00
+
+====== 文件夹 ======
+Created Wednesday 15 May 2019
+
+第三方软件放置文件的地方：/opt
+在/u
