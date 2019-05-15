@@ -159,7 +159,7 @@ $$\begin{vmatrix}1 & 2\\\\3 &4\end{vmatrix}$$
 $$\left|\begin{matrix}1 & 2\\\\3 &4\end{matrix}\right|$$
 
 $$\begin{Vmatrix}1 & 2\\\\3 &4\end{Vmatrix}$$
-复制代码
+
 \begin{matrix}1 & 2\\\\3 &4\end{matrix}
 \begin{pmatrix}1 & 2\\\\3 &4\end{pmatrix}
 \begin{bmatrix}1 & 2\\\\3 &4\end{bmatrix}
@@ -169,7 +169,7 @@ $$\begin{Vmatrix}1 & 2\\\\3 &4\end{Vmatrix}$$
 \begin{Vmatrix}1 & 2\\\\3 &4\end{Vmatrix}
 类似于 left right，这里是 begin 和 end。而且里面有具体的矩阵语法，& 区分行间元素，\\\\ 代表换行。可以理解为 HTML 的标签之类的。
 
-1.2.8 排版数组
+###### 1.2.8 排版数组
 \mathbf{X} =
 \left( \begin{array}{ccc}
 x\_{11} & x\_{12} & \ldots \\\\
@@ -183,13 +183,14 @@ x\_{11} & x\_{12} & \ldots \\\\
 x\_{21} & x\_{22} & \ldots \\\\
 \vdots & \vdots & \ddots
 \end{array} \right)
-2. 常用公式举例
+
+### 2. 常用公式举例
 持续更新……
 
-2.1 多行公式
+#### 2.1 多行公式
 主要是各种方程的表达
 
-2.1.1 长公式
+##### 2.1.1 长公式
 $$
 \begin{multline}
 x = a+b+c+{} \\\\
@@ -203,7 +204,7 @@ x ={}& a+b+c+{} \\\\
 &d+e+f+g
 \end{aligned}
 $$
-复制代码
+
 不对齐
 
 \left| \begin{multline}
@@ -216,7 +217,8 @@ d+e+f+g
 x ={}& a+b+c+{} \\\\
 &d+e+f+g
 \end{aligned} \right|
-2.1.2 公式组
+
+##### 2.1.2 公式组
 $$
 \begin{gather}
 a = b+c+d \\\\
@@ -230,7 +232,7 @@ a &= b+c+d \\\\
 x &= y+z
 \end{align}
 $$
-复制代码
+
 \begin{gather}
 a = b+c+d \\\\
 x = y+z
@@ -239,22 +241,23 @@ x = y+z
 a &= b+c+d \\\\
 x &= y+z
 \end{align}
-2.1.3 分段函数
+
+##### 2.1.3 分段函数
 $$
 y=\begin{cases}
 -x,\quad x\leq 0 \\\\
 x,\quad x>0
 \end{cases}
 $$
-复制代码
+
 y=\begin{cases}
 -x,\quad x\leq 0 \\\\
 x,\quad x>0
 \end{cases}
 里面用到了 \(\leq\) 符号，下一章会介绍常用数学符号。
 
-2.2 数组的其他使用
-2.2.1 划线
+##### 2.2 数组的其他使用
+##### 2.2.1 划线
 $$
 \left(\begin{array}{|c|c|}
 1 & 2 \\\\
