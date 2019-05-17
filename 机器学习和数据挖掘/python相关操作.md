@@ -36,8 +36,15 @@ len(df)
 ```
 # Finding out basic statistical information on your dataset.
 
-pd.options.display.float_format = '{:,.3f}'.format #Limit output to 3 decimal places.
+#Limit output to 3 decimal places.
+pd.options.display.float_format = '{:,.3f}'.format 
 df.describe()
+```
+这将返回一张表，其中有诸如总数、均值、标准差之类的统计数据：
+![image.png](0)
+8. 提取某列
+```
+
 ```
 
  7. 散点图
