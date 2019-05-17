@@ -50,7 +50,13 @@ df['rain_octsep']
 # Getting a column by label using .
 df.rain_octsep
 ```
-    ++布尔过滤 (boolean masking)++ 
+   ++布尔过滤 (boolean masking)++ 
+```
+# Creating a series of booleans based on a conditional
+df.rain_octsep < 1000 
+#Or df['rain_octsep] < 1000
+```
+上面的代码将会返回一个由布尔值构成的 dataframe。True 表示在十月-九月降雨量小于 1000 mm，False 表示大于等于 1000 mm。
 
  7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
