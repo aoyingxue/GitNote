@@ -1,4 +1,7 @@
-
+1. 导入 Pandas
+   import pandas as pd # This is the standard
+2. #Reading a csv into Pandas.
+df = pd.read_csv('uk_rain_2014.csv', header=0)
 1. 修改pandas dataframe的列名：
 ``` 
 # 显示df每列的名称
