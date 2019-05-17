@@ -44,8 +44,13 @@ df.describe()
 ![image.png](0)
 8. 提取某列
 ```
+# Getting a column by label
+df['rain_octsep']
 
+# Getting a column by label using .
+df.rain_octsep
 ```
+    ++布尔过滤 (boolean masking)++ 
 
  7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
