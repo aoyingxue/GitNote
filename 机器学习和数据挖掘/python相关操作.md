@@ -1,2 +1,11 @@
 1. 修改pandas dataframe的列名：
-   1. 
+``` 
+# 显示df每列的名称
+df.columns.values
+
+# 将第三列的列名改为'new name'
+>>> df.rename(columns={ df.columns[2]: "new name" }, inplace=True)
+
+# 假如df一共有三列，你想把所有列名依次改为'col_1', 'col_2', 'col_3'
+>>> df.columns = ['col_1', 'col_2', 'col_3']
+   ```
