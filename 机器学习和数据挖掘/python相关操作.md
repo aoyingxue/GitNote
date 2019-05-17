@@ -1,3 +1,4 @@
+
 1. 修改pandas dataframe的列名：
 ``` 
 # 显示df每列的名称
@@ -12,3 +13,4 @@ df.columns.values
 2. 读写csv
   - Tag0=pd.read_csv("190409_UWBtest/data/tag0.csv")
 3. 散点图
+  - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
