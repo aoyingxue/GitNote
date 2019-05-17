@@ -50,7 +50,8 @@ df['rain_octsep']
 # Getting a column by label using .
 df.rain_octsep
 ```
-   ++布尔过滤 (boolean masking)++ 
+   - ++布尔过滤 (boolean masking)++ 
+
 ```
 # Creating a series of booleans based on a conditional
 df.rain_octsep < 1000 
@@ -65,6 +66,11 @@ df[df.rain_octsep < 1000]
 # 复合条件表达式 Filtering by multiple conditionals
 df[(df.rain_octsep < 1000) & (df.outflow_octsep < 4000)] 
 # Can't use the keyword 'and'
+```
+使用字符串方法来进行过滤：
+```
+# Filtering by string methods
+df[df.water_year.str.startswith('199')]
 ```
 
  7. 散点图
