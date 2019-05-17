@@ -7,3 +7,4 @@ print(Tag0.columns.values)
 Tag0.plot.scatter(x='xloc',y='yloc')
 print(Tag0.head())
 ```
+![image.png](0)
