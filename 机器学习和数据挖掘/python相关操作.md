@@ -118,6 +118,20 @@ df.head(5)
 ![image.png](3)
 ### 11. 重新建立数据集结构
  1. groupby
+   ```
+#Manipulating structure (groupby, unstack, pivot)
+# Grouby
+df.groupby(df.year // 10 *10).max()
+```
+groupby 会按照你选择的列对数据集进行分组。上例是按照年代分组。不过仅仅这样做并没有什么用，我们必须对其调用函数，比如 max 、 min 、mean 等等。例中，我们可以得到 90 年代的均值。
+![image.png](4)
+你也可以按照多列进行分组：
+```
+# Grouping by multiple columns
+decade_rain = df.groupby([df.year // 10 * 10, df.rain_octsep // 1000 * 1000])[['outflow_octsep',                                                              'outflow_decfeb', 'outflow_junaug']].mean()
+decade_rain
+```
+
  2. 
 ### 10. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
