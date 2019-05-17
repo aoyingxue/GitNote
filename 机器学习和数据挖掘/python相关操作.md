@@ -131,7 +131,12 @@ groupby 会按照你选择的列对数据集进行分组。上例是按照年代
 decade_rain = df.groupby([df.year // 10 * 10, df.rain_octsep // 1000 * 1000])[['outflow_octsep',                                                              'outflow_decfeb', 'outflow_junaug']].mean()
 decade_rain
 ```
-
- 2. 
+![image.png](5)
+ 2. unstack：将一列数据设置为列标签
+ ```
+# Unstacking
+decade_rain.unstack(0)
+```
+![image.png](6)
 ### 10. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
