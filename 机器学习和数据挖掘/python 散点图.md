@@ -119,5 +119,6 @@ ax.set_xlabel('X', fontdict={'size': 15, 'color': 'black'})
 
 plt.show()
 ```
+![image.png](3)
 
  3. 
