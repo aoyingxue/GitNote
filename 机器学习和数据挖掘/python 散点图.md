@@ -45,6 +45,10 @@ ax.set_ylabel('Y', fontdict={'size': 15, 'color': 'red'})
 ax.set_xlabel('X', fontdict={'size': 15, 'color': 'red'})
 plt.show()
 ```
-
+![image.png](1)
  2. 有多种点及图例的散点图
+ ```
+
+```
+
  3. 
