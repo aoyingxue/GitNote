@@ -1,7 +1,13 @@
 1. 导入 Pandas
    import pandas as pd # This is the standard
-2. #Reading a csv into Pandas.
+2. 写入pandas
+   #Reading a csv into Pandas.
 df = pd.read_csv('uk_rain_2014.csv', header=0)
+3. 查看前 x 行的数据：
+#Getting first x rows.
+df.head(5)
+我们只需要调用 head() 函数并且将想要查看的行数传入。
+4. 
 1. 修改pandas dataframe的列名：
 ``` 
 # 显示df每列的名称
