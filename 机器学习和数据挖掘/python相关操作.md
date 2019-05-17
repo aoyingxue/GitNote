@@ -10,7 +10,7 @@ df.head(5)
 4. 你可能还想看看最后几行：
 #Getting last x rows.
 df.tail(5)
-1. 修改pandas dataframe的列名：
+5. 修改pandas dataframe的列名：
 ``` 
 # 显示df每列的名称
 df.columns.values
@@ -27,6 +27,11 @@ df.columns = ['water_year','rain_octsep', 'outflow_octsep',
 
 df.head(5)
    ```
- 
-3. 散点图
+ 6. 数据集的总行数
+```
+#Finding out how many rows dataset has.
+len(df)
+```
+
+ 3. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
