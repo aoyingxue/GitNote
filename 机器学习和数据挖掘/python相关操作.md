@@ -77,6 +77,14 @@ df[df.water_year.str.startswith('199')]
 #Getting a row via a numerical index
 df.iloc[30]
    ```
- - 通过
+ - 通过设置==索引==：
+ ```
+# Setting a new index from an existing column
+df = df.set_index(['water_year'])
+df.head(5)
+```
+将 water_year 列设置为索引：
+![image.png](1)
+
  7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
