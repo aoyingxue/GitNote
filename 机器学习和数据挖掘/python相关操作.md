@@ -7,7 +7,9 @@ df = pd.read_csv('uk_rain_2014.csv', header=0)
 #Getting first x rows.
 df.head(5)
 我们只需要调用 head() 函数并且将想要查看的行数传入。
-4. 
+4. 你可能还想看看最后几行：
+#Getting last x rows.
+df.tail(5)
 1. 修改pandas dataframe的列名：
 ``` 
 # 显示df每列的名称
@@ -18,6 +20,12 @@ df.columns.values
 
 # 假如df一共有三列，你想把所有列名依次改为'col_1', 'col_2', 'col_3'
 >>> df.columns = ['col_1', 'col_2', 'col_3']
+
+#Changing column labels.
+df.columns = ['water_year','rain_octsep', 'outflow_octsep',
+              'rain_decfeb', 'outflow_decfeb', 'rain_junaug', 'outflow_junaug']
+
+df.head(5)
    ```
 2. 读写csv
   - Tag0=pd.read_csv("190409_UWBtest/data/tag0.csv")
