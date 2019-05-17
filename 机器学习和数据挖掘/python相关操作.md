@@ -42,7 +42,7 @@ df.describe()
 ```
 这将返回一张表，其中有诸如总数、均值、标准差之类的统计数据：
 ![image.png](0)
-8. 提取某列
+8. 提取某列数据
 ```
 # Getting a column by label
 df['rain_octsep']
@@ -57,8 +57,7 @@ df.rain_octsep
 df.rain_octsep < 1000 
 #Or df['rain_octsep] < 1000
 ```
-上面的代码将会返回一个由布尔值构成的 dataframe。True 表示在十月-九月降雨量小于 1000 mm，False 表示大于等于 1000 mm。
-我们可以用这些条件表达式来过滤现有的 dataframe。
+上面的代码将会返回一个由布尔值构成的 dataframe。True 表示在十月-九月降雨量小于 1000 mm，False 表示大于等于 1000 mm。我们可以用这些条件表达式来过滤现有的 dataframe。
 ```
 # Using a series of booleans to filter
 df[df.rain_octsep < 1000]
@@ -67,7 +66,7 @@ df[df.rain_octsep < 1000]
 df[(df.rain_octsep < 1000) & (df.outflow_octsep < 4000)] 
 # Can't use the keyword 'and'
 ```
-使用字符串方法来进行过滤：
+  - 使用字符串方法来进行过滤：
 ```
 # Filtering by string methods
 df[df.water_year.str.startswith('199')]
