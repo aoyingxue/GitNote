@@ -95,6 +95,14 @@ df.loc['2000/01']
  ```
 df.sort_index(ascending=False).head(5) #inplace=True to apple the sorting in place
 ```
- - 
+ - 恢复索引：reset_index
+ ```
+# Returning an index to data
+df = df.reset_index('water_year')
+df.head(5)
+```
+这一语句会将索引恢复成数据形式：
+![image.png](2)
+
  7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
