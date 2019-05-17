@@ -9,3 +9,6 @@ df.columns.values
 # 假如df一共有三列，你想把所有列名依次改为'col_1', 'col_2', 'col_3'
 >>> df.columns = ['col_1', 'col_2', 'col_3']
    ```
+2. 读写csv
+  - Tag0=pd.read_csv("190409_UWBtest/data/tag0.csv")
+3. 散点图
