@@ -103,6 +103,7 @@ df.head(5)
 ```
 这一语句会将索引恢复成数据形式：
 ![image.png](2)
+### 10.对数据集应用函数 apply / applymap
 
 ### 10. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
