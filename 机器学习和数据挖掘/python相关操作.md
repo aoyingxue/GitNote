@@ -91,5 +91,10 @@ df.head(5)
 df.loc['2000/01']
 ```
  - ix()：基于标签，但同时支持数字型索引作为==备选==
+ - 标签排序：调用 sort_index 方法
+ ```
+df.sort_index(ascending=False).head(5) #inplace=True to apple the sorting in place
+```
+ - 
  7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
