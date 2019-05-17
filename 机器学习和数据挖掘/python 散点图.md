@@ -8,3 +8,5 @@ Tag0.plot.scatter(x='xloc',y='yloc')
 print(Tag0.head())
 ```
 ![image.png](0)
+
+## 2. matplotlib 三维散点图
