@@ -57,6 +57,15 @@ df.rain_octsep < 1000
 #Or df['rain_octsep] < 1000
 ```
 上面的代码将会返回一个由布尔值构成的 dataframe。True 表示在十月-九月降雨量小于 1000 mm，False 表示大于等于 1000 mm。
+我们可以用这些条件表达式来过滤现有的 dataframe。
+```
+# Using a series of booleans to filter
+df[df.rain_octsep < 1000]
+
+# 复合条件表达式 Filtering by multiple conditionals
+df[(df.rain_octsep < 1000) & (df.outflow_octsep < 4000)] 
+# Can't use the keyword 'and'
+```
 
  7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
