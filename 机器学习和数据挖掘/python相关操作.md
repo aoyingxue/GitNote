@@ -32,6 +32,13 @@ df.head(5)
 #Finding out how many rows dataset has.
 len(df)
 ```
+7. 基本统计数据
+```
+# Finding out basic statistical information on your dataset.
 
- 3. 散点图
+pd.options.display.float_format = '{:,.3f}'.format #Limit output to 3 decimal places.
+df.describe()
+```
+
+ 7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
