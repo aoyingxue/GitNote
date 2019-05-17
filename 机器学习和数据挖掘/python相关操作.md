@@ -104,6 +104,20 @@ df.head(5)
 这一语句会将索引恢复成数据形式：
 ![image.png](2)
 ### 10.对数据集应用函数 apply / applymap
+```
+# Applying a function to a column
+def base_year(year):
+    base_year = year[:4]
+    base_year= pd.to_datetime(base_year).year
+    return base_year
 
+df['year'] = df.water_year.apply(base_year)
+df.head(5)
+```
+上面的代码创建了一个叫做 year 的列，它只将 water_year 列中的年提取了出来。这就是 apply 的用法，即对一列数据应用函数。如果你想对整个数据集应用函数，就要使用 applymap 。
+![image.png](3)
+### 11. 重新建立数据集结构
+ 1. groupby
+ 2. 
 ### 10. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
