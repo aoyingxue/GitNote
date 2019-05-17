@@ -72,7 +72,7 @@ df[(df.rain_octsep < 1000) & (df.outflow_octsep < 4000)]
 df[df.water_year.str.startswith('199')]
 ```
 9. 提取行数据
- - 行标签是==数字型==的：
+ - 行标签是==数字型==的：iloc()
   ```
 #Getting a row via a numerical index
 df.iloc[30]
@@ -85,6 +85,11 @@ df.head(5)
 ```
 将 water_year 列设置为索引：
 ![image.png](1)
+ - 字符型数据：loc()
+ ```
+# Getting a row via a label-based index
+df.loc['2000/01']
+```
 
  7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
