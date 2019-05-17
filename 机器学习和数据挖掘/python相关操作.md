@@ -1,16 +1,16 @@
-1. 导入 Pandas
+### 1. 导入 Pandas
    import pandas as pd # This is the standard
-2. 将csv写入pandas
+### 2. 将csv写入pandas
    #Reading a csv into Pandas.
 df = pd.read_csv('uk_rain_2014.csv', header=0)
-3. 查看前 x 行的数据：
+### 3. 查看前 x 行的数据：
 #Getting first x rows.
 df.head(5)
 我们只需要调用 head() 函数并且将想要查看的行数传入。
-4. 你可能还想看看最后几行：
+### 4. 你可能还想看看最后几行：
 #Getting last x rows.
 df.tail(5)
-5. 修改pandas dataframe的列名：
+### 5. 修改pandas dataframe的列名：
 ``` 
 # 显示df每列的名称
 df.columns.values
@@ -27,12 +27,12 @@ df.columns = ['water_year','rain_octsep', 'outflow_octsep',
 
 df.head(5)
    ```
- 6. 数据集的总行数
+ ### 6. 数据集的总行数
 ```
 #Finding out how many rows dataset has.
 len(df)
 ```
-7. 基本统计数据
+### 7. 基本统计数据
 ```
 # Finding out basic statistical information on your dataset.
 
@@ -42,7 +42,7 @@ df.describe()
 ```
 这将返回一张表，其中有诸如总数、均值、标准差之类的统计数据：
 ![image.png](0)
-8. 提取某列数据
+### 8. 提取某列数据
 ```
 # Getting a column by label
 df['rain_octsep']
@@ -71,7 +71,7 @@ df[(df.rain_octsep < 1000) & (df.outflow_octsep < 4000)]
 # Filtering by string methods
 df[df.water_year.str.startswith('199')]
 ```
-9. 提取行数据
+### 9. 提取行数据
  - 行标签是==数字型==的：iloc()基于数字
   ```
 #Getting a row via a numerical index
@@ -104,5 +104,5 @@ df.head(5)
 这一语句会将索引恢复成数据形式：
 ![image.png](2)
 
- 7. 散点图
+### 10. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
