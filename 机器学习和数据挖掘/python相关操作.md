@@ -71,6 +71,12 @@ df[(df.rain_octsep < 1000) & (df.outflow_octsep < 4000)]
 # Filtering by string methods
 df[df.water_year.str.startswith('199')]
 ```
+9. 提取行数据
+ - 行标签是数字型的：
+  ```
+#Getting a row via a numerical index
+df.iloc[30]
+   ```
 
  7. 散点图
   - Tag0.plot.scatter(x='xloc',y='yloc',c='t')
