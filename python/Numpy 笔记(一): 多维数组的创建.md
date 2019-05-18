@@ -1,5 +1,5 @@
 
-Numpy 笔记(一): 多维数组的创建 · ZMonster's Blog
+Numpy 笔记(一): 多维数组的创建
 
 
 ## ndarray 的创建
@@ -89,7 +89,7 @@ print np.fromstring(array.tostring())
 [  4.94065646e-324   9.88131292e-324   1.48219694e-323   1.97626258e-323]
 ```
 
-fromiter: 从可迭代对象中生成一维数组
+==fromiter==: 从可迭代对象中生成一维数组
 
 和第一种方法的不同之处在于:
 
