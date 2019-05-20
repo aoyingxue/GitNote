@@ -1,12 +1,11 @@
-可以用到的函数有df.reindex, pd.concat
+可以用到的函数有==df.reindex, pd.concat==
 
 我们来看一个例子：
 
-df 是一个DataFrame， 如果你只想在df的后面添加一列，可以用下面的方法，
+- df 是一个DataFrame， 如果你只想在df的后面添加一列，可以用下面的方法，
 
-
+```
 df = pd.DataFrame(columns=['A', 'B'], data = [[1,2],[3,4]])
- 
 df
 Out[52]: 
    A  B
@@ -22,11 +21,13 @@ Out[55]:
    A     B     C
 0  1  None  None
 1  3  None  None
+```
 但是如果你想一次性添加两列级以上，你可能会用通样的办法
-
+```
 df[['D','E']] == None
- 
 # 结果就报错了 
+``` 
+
  
 KeyError: "['D' 'E'] not in index"
 
