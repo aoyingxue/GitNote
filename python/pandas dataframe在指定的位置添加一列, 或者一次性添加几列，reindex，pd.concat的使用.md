@@ -26,34 +26,39 @@ Out[55]:
 ```
 df[['D','E']] == None
 # 结果就报错了 
+KeyError: "['D' 'E'] not in index"
+
 ``` 
 
  
-KeyError: "['D' 'E'] not in index"
 
 所以接下来我想介绍两种认为比较简便的方法
 
-第一个方法是利用pd.concat 在DataFrame后面添加两列，这种方法的缺点是不能指定位置
+- 第一个方法是利用pd.concat 在DataFrame后面添加两列，这种方法的缺点是不能指定位置
 
-
+```
  pd.concat([df, pd.DataFrame(columns=list('DE'))])
 Out[57]: 
      A     B     C    D    E
 0  1.0  None  None  NaN  NaN
 1  3.0  None  None  NaN  NaN
-
-第二种方法是利用 reindex来重排和增加列名
+```
+- 第二种方法是利用 reindex来重排和增加列名
+```
 df.reindex(columns=list('ABCDE'))
 Out[58]: 
    A     B     C   D   E
 0  1  None  None NaN NaN
 1  3  None  None NaN NaN
-这种方法，你可以改变各列的相对位置，且保留原始列的数值，比如
+```
+- 这种方法，你可以改变各列的相对位置，且保留原始列的数值，比如
+```
 df.reindex(columns=list('BCADE'))
 Out[59]: 
       B     C  A   D   E
 0  None  None  1 NaN NaN
 1  None  None  3 NaN NaN
+```
 reindex 还有 fill_value 选项，可以填充NaN，例子如下
 df.reindex(columns=list('ABCDE'), fill_value=0)
 Out[60]: 
