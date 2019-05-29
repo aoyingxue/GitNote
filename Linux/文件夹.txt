@@ -1,1 +1,0 @@
-<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-75adc884-ee4e-44d9-a26b-403a04d85314"></attachment><p>Content-Type: text/x-zim-wiki Wiki-Format: zim 0.4 Creation-Date: 2019-05-15T21:27:02+08:00 ====== 文件夹 ====== Created Wednesday 15 May 2019 * 第三方软件放置文件的地方：/opt * 在/usr/bin目录下创建软链接（系统用到的与开机过程有关的命令） * 桌面快捷方式在/usr/share/applications添加.desktop文件</p><p><br></p>
