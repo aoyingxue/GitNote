@@ -6,4 +6,5 @@ but marketing also, applies to ==non-profit== or things where there isn't necess
 
 3. What is a basic EXCHANGE?
 One buyer - one seller
-Seller's Market: seller has a product; 
+**Seller's Market**: seller has a product; buyer comes to the seller
+**Buyer's Market**: many competi
