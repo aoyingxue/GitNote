@@ -4,5 +4,6 @@
 2. A market is an ==**++exchange++**== between two partners, frequently a ==buyer== and a ==seller==, 
 but marketing also, applies to ==non-profit== or things where there isn't necessarily money being transacted.
 
-3. 
+3. What is a basic EXCHANGE?
+One buyer - one seller
 
