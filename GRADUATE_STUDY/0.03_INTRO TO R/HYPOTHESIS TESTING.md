@@ -35,7 +35,7 @@
 
 - Evidence from Sample Data (support the null or alternate)
 - t<sub>calc.</sub>, Z<sub>calc.</sub>, F<sub>calc</sub> (根据不同的population parameter)
-- (Point Estimate – Hypothesized Value（在第一步里找到的）)/Standard Error 
+- (Point Estimate – Hypothesized Value（在第一步里找到的）)/Standard Error (SE)
 
 ### Step 5: Rejection Rule
 
