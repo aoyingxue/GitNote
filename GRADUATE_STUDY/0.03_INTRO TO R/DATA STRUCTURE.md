@@ -1,0 +1,224 @@
+- 1. 源笔记见onenote [Data Structures](onenote:https://d.docs.live.net/756069502b6b2552/文档/mine/留學/R_DATA MINING.one#Data Structures&section-id={6586582A-F6DB-4AE2-A78F-8024130959B5}&page-id={69C2488A-1736-4F42-8B48-9F7E1A14DA7B}&end)  ([Web view](https://onedrive.live.com/view.aspx?resid=756069502B6B2552!554&id=documents&wd=target(留學%2FR_DATA MINING.one|6586582A-F6DB-4AE2-A78F-8024130959B5%2FData Structures|69C2488A-1736-4F42-8B48-9F7E1A14DA7B%2F)))
+
+  2. Data structures
+
+  3. 1. Vector
+
+     2. 1. 1-dimensional collection
+
+        2. Homogenous data：
+
+        3. 1. c(1,"hello",TRUE) ：当数组中有character和其他类型时，把所有元素会强制转换成character
+
+        4. How to construct: c()
+
+        5. Number of elements: Length()
+
+     3. Matrix
+
+     4. 1. 2-dimensional collection
+        2. Homogenous data
+        3. How to construct:  matrix(), rbind(), cbind()
+        4. Give dimension/ size: dim(), nrow(), ncol()
+
+     5. Data.frame
+
+     6. Factor
+
+     7. List
+
+  4. 新建data
+
+  5. 1. Vector:
+
+- ```R
+  u = vector("numeric",length = 3) # an empty numeric vector of length 3`
+  
+  u
+  
+  [1] 0 0 0
+  ```
+
+- ```R
+  w = vector("character", length = 4) # an empty character vector of length 4
+  
+  w
+  
+  [1] "" "" "" ""
+  ```
+
+- ```R
+  # use [n] to denote the position n you want to access
+  
+  # use [1:3] to specify the starting position and ending position
+  
+  # use [c(1,3)] to specify separate positions
+  
+  # use [-n] to show all the elements except n
+  ```
+
+- ​		2. Numeric:
+
+- ```R
+  v = numeric(5) # an empty numeric vector of length 5
+  
+  v
+  
+  [1] 0 0 0 0 0
+  ```
+
+- ​		3. Character:
+
+- ```R
+  z = character(2) # an empty character vector of length 2
+  
+  z
+  
+  [1] "" ""
+  ```
+
+- ​		4. 等差数组：
+
+- 1. ​	1. a = 3:7 ## Use a:b to denote the starting point a and ending point b and create continous sequence 等差为1的数列
+
+  2. ​	2. b = seq(from = 1, to = 9, by = 2) # sequence of numbers from 1 to 9 incremented by 2 等差数列
+
+  3. ​	3. c = rep(3,4)  # replicate 3 for 4 times 重复数列
+
+  4. 5. Matrix:
+
+        1. matrix(): 默认是按列排序，可以改为按行排序
+
+     6. 2. ```R
+           matrix(data=1:6,nrow = 3,ncol = 2)
+           
+           ​     [,1] [,2]
+           
+           [1,]    1    4
+           
+           [2,]    2    5
+           
+           [3,]    3    6
+           ```
+
+           ```R
+           matrix(data=1:6,nrow = 3,ncol = 2,byrow=TRUE) # Filling a matrix by row
+           
+           ​     [,1] [,2]
+           
+           [1,]    1    2
+           
+           [2,]    3    4
+           
+           [3,]    5    6
+           ```
+
+           
+
+        3. cbind()：可用来连接不同列，当两个列数组长度不一时，短的数组会循环填补
+
+- ```R
+  a1 = 1:6
+  
+  a2 = 4:5  # what if a1 and a2 has different length
+  
+  cbind(a1,a2) ##shorter vector will be recycled to achieve the length
+  
+  ​     a1 a2
+  
+  [1,]  1  4
+  
+  [2,]  2  5
+  
+  [3,]  3  4
+  
+  [4,]  4  5
+  
+  [5,]  5  4
+  
+  [6,]  6  5
+  ```
+
+- ​				4. rbind()
+
+- ​				5. 如果matrix中有不同元素的话，R会自动把所有元素变成character
+
+- ​				6. 查看长度：
+
+- 1. ​				nrow()——多少行
+
+  2. ​				ncol()——多少列
+
+  3. ​				dim()——行和列，dim[1]是行数
+
+  4. 读取某行某列数：a[row_index,column_index]
+  5. 读取某行数：a[1,]
+  6. 读取某列数：a[,1]
+  7. 可以直接对matrix进行数学运算，例如：a+1; a*2
+  8. 可以对多个同样大小的matrix直接计算，例如a+a/a-a
+  9. 转置矩阵 transpose: t()
+  10. 矩阵乘法 Matrix Algebric Multiplication：a%*%t(a)（必须是n*m, m*p的矩阵）
+  11. sum(): 把所有矩阵里的元素相加
+  12. mean(): 所有元素的平均值
+  13. MARGIN=1 是按行计算；MARGIN=2是按列计算
+
+- `a`
+
+- ` `
+
+- `apply(a,MARGIN = 1,sum)  # caculate sum of each row`
+
+- ` `
+
+- `apply(a,MARGIN = 2,mean) # mean of each column`
+
+- \`````
+
+- `     [,1] [,2]`
+
+- `[1,]    1    4`
+
+- `[2,]    2    5`
+
+- `[3,]    3    6`
+
+- `[1] 5 7 9`
+
+- `[1] 2 5`
+
+- ` `
+
+- 1. data.frame（）
+
+  2. 1. Collection of Vectors (Same length) 向量的集合
+     2. Columns: attribute 列：属性名
+     3. Rows: instances 
+     4. read.csv()：读取csv并生成dataframe
+     5. 可以用data.frame(x,y,z)新建df（x,y,z分别是每列的vector内容）
+
+- ` `
+
+- 1. list()
+
+  2. 1. 可以有由很多类型的object组成的向量，比如一个df一个v一个matrix
+     2. 用[[n]]来获取list中的第n个object；用[n]获取的object类别还是list
+
+- 
+
+- 1. factor()：
+
+  2. 1. 因子的unique values则是因子的levels
+     2. 如果要有带排序的levels，factor_seasons = factor(seasons,***levels=c***("Spring","Summer","Fall","Winter"),***ordered = TRUE***)
+     3. 如果是连续的levels，可以用**cut()**来切分出几段levels，例如factor_height= cut(women$height,3,labels=c('Low','Medium','High'))
+
+- 
+
+- 1. 产生随机数的几种方法：
+
+  2. 1. 均匀分布随机数uniform distribution runif()：
+
+     2. 1. runif(n,min=0,max=1)    n表示生成的随机数数量，min表示均匀分布的下限，max表示均匀分布的上限；若省略参数min、max,则默认生成[0,1]上的均匀分布随机数。
+
+     3. 正态分布随机数 rnorm()：
+
+     4. 1. rnorm（n,mean=0,sd=1）  其中n表示生成的随机数数量，mean是正态分布的均值，默认为0，sd是正态分布的标准差，默认时为1;

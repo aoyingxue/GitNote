@@ -55,5 +55,9 @@
 - State significance level 唯一的tech部分
 - 结论只需要提到同不同意alternate就行了
 
+练习：
+
+
+
 ## II. Concept - Hypothesis Testing for Slope
 
