@@ -1,0 +1,48 @@
+---
+title: "RClass Module 2 Practice Problem 1"
+author: "DuraiSundaramoorthi"
+date: "7/15/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+nv1 = vector("numeric",length = 6) # an empty numeric vector of length 6
+
+nv2 = seq(from = 2, to = 20, by = 2) # even numbers from 2 to 20
+
+length(nv2) # length is 10
+
+nv2[6] # sixth element is 12
+
+nv2 = c(nv2, 22) # adding a new element
+ 
+nv2 = nv2[-1] # removing the first element
+
+print(nv2) # printing nv2
+
+mean(nv2) # calculating mean
+
+min(nv2) # calculating minimum
+
+max(nv2) # calculating maximum
+
+sd(nv2) # calculating standard deviation
+
+nv3 = 1:10 # vector 1 to 10
+
+nv3 = nv3 + 3 # add 3 to each element
+
+nv3 = as.character(nv3) # coerce to character
+
+print(nv3) # printing nv3
+```

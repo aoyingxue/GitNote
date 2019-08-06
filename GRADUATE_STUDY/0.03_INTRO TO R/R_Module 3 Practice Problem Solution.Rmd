@@ -1,0 +1,40 @@
+---
+title: "R_Module 3 Practice Problem 1"
+author: "DuraiSundaramoorthi"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+help(runif) ## using help function to read the R documentation of runif
+
+u1 = runif(1000) ## using runif() to generate a vector of length 1000 
+
+min(u1) ## minimum of u1
+
+max(u1) ## maximum of u1
+
+mean(u1) ## mean of u1
+
+hist(u1) ## plotting histogram of u1
+
+u2 = runif(1000, -5, 5) ## using runif() to generate a vector of length of 1000 with minimum of -5 and maximum of 5
+
+min(u2) ## minimum of u2
+
+max(u2) ## maximum of u2
+
+mean(u2) ## mean of u2
+
+hist(u2) ## plotting histogram of u2
+
+```

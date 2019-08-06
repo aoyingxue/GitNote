@@ -1,0 +1,33 @@
+---
+title: "R Module 1 Practice Problem 1"
+author: "DuraiSundaramoorthi"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+U = 5 ## Assign 5 to U
+V = TRUE ## Assign TRUE to V
+X = "5" ## Assign "5" to X
+Y = "TRUE" ## Assign "TRUE" to Y
+
+U + 1 ## Add 1 to U
+V + 1 ## Add 1 to V
+X + 1 ## Add 1 to X
+Y + 1 ## Add 1 to Y
+
+class(U) ## Class of U
+class(V) ## Class of V
+class(X) ## Class of X
+class(Y) ## Class of Y
+```
+
