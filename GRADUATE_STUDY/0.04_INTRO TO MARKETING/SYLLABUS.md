@@ -1,4 +1,4 @@
-- [ ] Week 1: BRANDING: Marketing Strategy and Brand Positioning (7)
+- [x] Week 1: BRANDING: Marketing Strategy and Brand Positioning (7)
 
   - [x] Marketing 101: Building Strong Brands Part I 
 
@@ -8,11 +8,11 @@
 
   - [x] Segmentation and Targeting
 
-  - [ ] Brand Positioning
+  - [x] Brand Positioning
 
-  - [ ] Brand Mantra: The Elevator Speech
+  - [x] Brand Mantra: The Elevator Speech
 
-  - [ ] Experiential Branding
+  - [x] Experiential Branding
 
 - [ ] Week 2: CUSTOMER CENTRICITY: The Limits of Product-Centric Thinking & The Opportunities and Challenges of Customer Centricity (9) 1h 21m
 
