@@ -14,37 +14,37 @@
 
   - [x] Experiential Branding
 
-- [ ] Week 2: CUSTOMER CENTRICITY: The Limits of Product-Centric Thinking & The Opportunities and Challenges of Customer Centricity (9) 1h 21m
+- [x] Week 2: CUSTOMER CENTRICITY: The Limits of Product-Centric Thinking & The Opportunities and Challenges of Customer Centricity (9) 1h 21m
 
-  - [ ] From Product-Centric to Customer-Centric Management
+  - [x] From Product-Centric to Customer-Centric Management
 
-  - [ ] Cracks in the Product-Centric Approach
+  - [x] Cracks in the Product-Centric Approach
 
-  - [ ] Data-Driven Business Models
+  - [x] Data-Driven Business Models
 
-  - [ ] Three Cheers for Direct Marketing
+  - [x] Three Cheers for Direct Marketing
 
-  - [ ] Which Firms Are Customer Centric?
+  - [x] Which Firms Are Customer Centric?
 
-  - [ ] What is Customer Centricity?
+  - [x] What is Customer Centricity?
 
-  - [ ] Living in a Customer-Centric World
+  - [x] Living in a Customer-Centric World
 
-  - [ ] More Reflections on Customer Centricity
+  - [x] More Reflections on Customer Centricity
 
-  - [ ] Questions on Customer Centricity
+  - [x] Questions on Customer Centricity
 
 - [ ] Week 3: GO TO MARKET STRATEGIES: Online-Offline Interaction & How to Find Lead Users and Facilitate Influence and Contagion (12) 1h 53m
 
-  - [ ] Introduction and Execution
+  - [x] Introduction and Execution
 
-  - [ ] Online/Offline Competition
+  - [x] Online/Offline Competition
 
-  - [ ] Friction
+  - [x] Friction
 
-  - [ ] The Long Tail Part 1
+  - [x] The Long Tail Part 1
 
-  - [ ] The Long Tail Part 2
+  - [x] The Long Tail Part 2
 
   - [ ] Preference Isolation
 
