@@ -46,11 +46,11 @@
 
   - [x] The Long Tail Part 2
 
-  - [ ] Preference Isolation
+  - [x] Preference Isolation
 
-  - [ ] How Internet Retailing Startups Grow
+  - [x] How Internet Retailing Startups Grow
 
-  - [ ] Customers and Digital Marketing
+  - [x] Customers and Digital Marketing
 
   - [ ] Influence and How Information Spreads
 
