@@ -34,7 +34,7 @@
 
   - [x] Questions on Customer Centricity
 
-- [ ] Week 3: GO TO MARKET STRATEGIES: Online-Offline Interaction & How to Find Lead Users and Facilitate Influence and Contagion (12) 1h 53m
+- [x] Week 3: GO TO MARKET STRATEGIES: Online-Offline Interaction & How to Find Lead Users and Facilitate Influence and Contagion (12) 1h 53m
 
   - [x] Introduction and Execution
 
@@ -52,13 +52,13 @@
 
   - [x] Customers and Digital Marketing
 
-  - [ ] Influence and How Information Spreads
+  - [x] Influence and How Information Spreads
 
-  - [ ] Pricing Strategies 1: Introduction
+  - [x] Pricing Strategies 1: Introduction
 
-  - [ ] Pricing Strategies 2: Customer Factors
+  - [x] Pricing Strategies 2: Customer Factors
 
-  - [ ] The 7ms
+  - [x] The 7ms
 
 - [ ] Week 4: BRANDING: Effective Brand Communications Strategies and Repositioning Strategies (6) 1h 26m
 
