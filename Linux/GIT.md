@@ -88,3 +88,51 @@ $ git remote add origin git@github.com:yourName/yourRepo.git
 显示历史记录时，每个提交的信息只显示一行： `git config format.pretty oneline` 
 
 交互式添加文件到暂存区： `git add -i`
+
+
+
+
+
+### Pull出错：fatal: refusing to merge unrelated histories
+
+```shell
+git pull origin branchname --allow-unrelated-histories
+```
+
+
+
+### push出错：! [rejected] master -> master (non-fast-forward)
+
+```shell
+git pull origin master #先要pull下来远程的
+git push origin master
+```
+
+
+
+### .gitignore
+
+```shell
+touch .gitignore #生成文件
+```
+
+
+
+### push出错：master -> master (pre-receive hook declined)
+
+### 新建git步骤
+
+- 不要新建的时候add read.me，新建之后在命令行
+
+- ```shell
+  echo "# project name" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git remote add origin https://github.com/aoyingxue/xxxxx.git
+  git push -u origin master
+  ```
+
+### GIT LARGE FILE STORAGE:
+
+https://git-lfs.github.com/
