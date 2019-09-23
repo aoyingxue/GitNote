@@ -5,3 +5,5 @@ I put my study markdown notes pushed onto here to sync with different systems an
 I used a few different types of markdown softwares such as gitnote, typora.
 gitnote has a few syncing and signing in problems so i chose to use typora on my mac.
 but gitnote seems fine working on linux.
+
+If LaTex is needed, you could install a chrome extension called "MathJax Plugin for Github" for previewing the LaTex equations. 
