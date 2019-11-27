@@ -1,0 +1,36 @@
+---
+title: "R_Module 2 Practice Problem 2"
+author: "DuraiSundaramoorthi"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+
+v3 = seq(1, 29, 2) ## generate odd numbers from 1 to 30
+
+m1 = matrix(v3, nrow = 3, ncol = 5, byrow = FALSE) ## 3 rows, 5 columns, fill by column
+
+m2 = matrix(v3, nrow = 5, ncol = 3, byrow = FALSE) ## 5 rows, 3 columns, fill by column 
+
+m1 = m1 + 1 ## add 1 to every element 
+
+m2 = m2 * 2 ## multiplying every element by 2 
+
+t(m2) ## transpose of m2
+
+m1 + t(m2) ## adding transpose of m2 to m1
+
+m1 %*% m2 ## matrix multiplication of m1 and m2
+
+
+```

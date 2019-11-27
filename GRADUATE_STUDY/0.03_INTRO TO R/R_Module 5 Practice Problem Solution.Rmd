@@ -1,0 +1,121 @@
+---
+title: "R_Module 5 Practice Problems Solution"
+author: "DuraiSundaramoorthi"
+date: "7/15/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+## R Class Module 5 Practice Problem 1 Solution
+
+```{r}
+## Constructing a function to convert Celcius to Fahrenheit
+c_to_f<-function(C){
+F = C*1.8 +32
+return(F)
+}
+
+
+c_to_f(26) ## converting 26 degree Celcius to Fahrenheit
+
+```
+
+
+## R Class Module 5 Practice Problem 2 Solution
+
+```{r}
+## Imported nyc_flights.csv to the R environment
+flights = read.csv("C:/C/OnlineRClass/nyc_flights.csv")
+
+nrow(flights) ## Number of flights in the data
+
+table(flights$month) ## Number of flights in each month
+
+max(flights$dep_delay,na.rm=TRUE) ## Maximum departure delay
+
+max(flights$air_time,na.rm =TRUE) ## Maximum air time
+
+flights_sample = flights[1:1000,] ## Firts 1000 rows of data
+
+save(flights_sample,file="flights_sample.RData") ## Save the object in RData file
+
+rm(flights_sample) ## Remove the object from the environment
+
+flights_sample ## Access the unavailable object
+
+load("flights_sample.RData") ## Load the saved Rdata file
+
+flights_sample ## Access the reloaded object 
+
+```
+
+
+## R Class Module 5 Practice Problem 3 Solution
+
+```{r}
+library(dplyr) ## load dplyr 
+
+flight_1=select(flights,month,day,origin,dest,air_time)## Creating a new dataframe with month, day, origin, dest, air_time
+
+flight_1=arrange(flight_1,air_time) ## ascending order of air time
+
+print(flight_1[1:10,]) ## Printing first 10 rows
+
+filter(flight_1,month==1,day==1,origin=="LGA") %>%
+summarise(mean(air_time,na.rm=TRUE)) ## 4.	Calculating the average air_time for all the flights whose origin is LGA on January 1st
+
+```
+
+## R Class Module 5 Practice Problem 4 Solution
+
+```{r}
+names(flights)
+delay_route_summary = flights %>%
+                       group_by(origin,dest) %>%
+                       summarise(
+                       avg_dep_delay = mean(dep_delay,na.rm =                          TRUE),
+                       avg_arr_delay = mean(arr_delay,na.rm =                          TRUE),
+                       flights = n()
+                       ) %>% 
+                      arrange(desc(avg_dep_delay))
+                      
+delay_route_summary
+
+delay_carrier_summary = flights %>%
+                       group_by(carrier) %>%
+                       summarise(
+                       avg_dep_delay = mean(dep_delay,na.rm =                          TRUE),
+                       avg_arr_delay = mean(arr_delay,na.rm =                          TRUE),
+                       tot_distance = sum(distance, na.rm =                           TRUE),
+                       ) %>% 
+                      arrange(desc(avg_arr_delay))
+                      
+delay_carrier_summary
+
+```
+
+
+## R Class Module 5 Practice Problem 5 Solution
+
+```{r}
+library(ggplot2)
+
+library(lubridate)
+
+flights$weekday=weekdays(ymd_hms(flights$time_hour))
+
+ggplot(flights) + geom_bar(aes(x=weekday,fill=origin)) + labs(title="Weekday Flights From Each NYC Airport") ##	A bar plot on count of flights for each weekday;	A colored bar plot on count of flights for each weekday from each origin; Titile is “Weekday Flights From Each NYC Airport”
+
+
+ggplot(flights) + geom_point(aes(x = origin,y=distance)) ## 4.	A scatter plot on distance for each airport; X axis is origin; Y axis is distance
+
+```

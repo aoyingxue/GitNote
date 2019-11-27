@@ -1,0 +1,224 @@
+---
+title: "practice"
+output: html_document
+time: 21:28 2019-07-29
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+R-Class Module 2 Practice Problem 1
+```{r}
+nv1<-numeric(6)
+nv1
+
+nv2<-seq(from=2,to = 20,by = 2)
+nv2
+
+length(nv2)
+
+nv2[6]
+
+nv2<-c(nv2,22)
+
+nv2<-nv2[-1]
+
+nv2
+
+mean(nv2)
+min(nv2)
+max(nv2)
+sd(nv2)
+
+nv3<-1:10
+
+nv3<-nv3+3
+
+nv3<-as.character(nv3)
+
+nv3
+
+
+```
+
+R-Class Module 2 Practice Problem 2
+
+```{r}
+v3<-seq(from=1,to = 29,by=2)
+v3
+
+m1<-matrix(v3,nrow = 3,ncol = 5,byrow = FALSE)
+m2<-matrix(v3,nrow = 5,ncol = 3,byrow = FALSE)
+m1<-m1+1
+m2<-m2*2
+t(m2)
+
+m1+t(m2)
+
+m1%*%m2
+
+```
+
+
+
+```{r}
+a = matrix(data=1:6,nrow = 3,ncol = 2)
+
+m =  a%*%t(a)
+
+dim(m)[1]
+
+a = matrix(data=1:6,nrow = 3,ncol = 2)
+
+dim(a)[1]
+```
+
+Module 4:
+1.
+```{r}
+
+Name=c("Sally","Mike","Carol")
+Gender=c("F","M","F")
+TenK=c(55,46,62)
+PR=c(52,44,58)
+Qualified=c(FALSE,TRUE,FALSE)
+running=data.frame(Name,Gender,TenK,PR,Qualified)
+running
+
+HalfMarathon=c(120,100,140)
+running<-cbind(running,HalfMarathon)
+running
+
+running<-rbind(running,c("Sage","M",40,42,TRUE,81))
+running
+```
+
+
+Module 5:
+1.
+```{r}
+c_to_f=function(Celsius){
+  Fahrenheit = Celsius*1.8+32
+  return(Fahrenheit)
+}
+
+print(c_to_f(26))
+
+```
+
+2.
+```{r}
+setwd("D:/Graduate/03_INTRO TO R PROGRAMMING")
+flights<-read.csv("nyc_flights.csv")
+
+nrow(flights)
+table(flights$month)
+max(flights$dep_delay)
+max(flights$air_time)
+
+flights_sample=flights[1:1000,]
+save(flights_sample,file = "flights_sample.RData")
+
+rm(flights_sample)
+```
+
+
+3.
+```{r}
+library("dplyr")
+flights_1<-select(flights,"month","day","origin","dest","air_time")
+
+flights_1<-arrange(flights, air_time)
+print(flights_1[1:10,])
+# filter(flights_1,month==1,day==1,origin=="LGA")%>%
+
+```
+
+4.
+```{r}
+
+delay_route_summary<-flights%>%
+  group_by(origin, dest)%>%
+  summarise(
+    flights=n(),
+    average_dep_delay=mean(dep_delay,na.rm = TRUE), #remove all the NAs
+    average_arr_delay=mean(arr_delay,na.rm = TRUE)
+  )%>%
+  arrange(desc(average_dep_delay))
+delay_route_summary
+
+delay_carrier_summary<-flights%>%
+  group_by(carrier)%>%
+  summarise(
+    flights=n(),
+    average_del_delay=mean(dep_delay,na.rm = TRUE),
+    average_arr_delay=mean(arr_delay,na.rm = TRUE),
+    total_distance=sum(distance,na.rm = TRUE)
+  )%>%
+  arrange(desc(average_del_delay))
+delay_carrier_summary
+
+```
+
+```{r}
+library("dplyr","lubridate")
+names(flights)
+least_departure_delay<-flights%>%
+  filter(month==1,day==1)
+min(least_departure_delay$dep_delay,na.rm = TRUE)
+max(least_departure_delay$dep_delay,na.rm = TRUE)
+
+NewYear = filter(flights, month == 1, day == 1)
+
+
+# filter(NewYear,origin=="JFK") %>%
+#   summarise(max(dep_delay,na.rm=TRUE))
+# 
+# filter(NewYear,origin=="JFK") %>%
+#   summarise(min(dep_delay,na.rm=TRUE))
+# 
+# NewYear = mutate(NewYear, speed = distance/air_time*60,total_delay = dep_delay +arr_delay)
+# 
+# NewYear = arrange(NewYear,desc(speed))
+# 
+# NewYear$speed[1]
+dim(NewYear)[1]
+NewYear = mutate(NewYear, speed = distance/air_time*60,
+
+                total_delay = dep_delay + arr_delay)
+
+NewYear = arrange(NewYear,desc(total_delay))
+
+NewYear$total_delay[1]
+```
+
+```{r}
+library(lubridate)
+
+now ="2025-08-01 10:10:00"
+
+now=ymd_hms(now)
+
+class(now)
+now ="2025-08-01 10:10:00"
+
+class(now)
+
+now ="2025-08-01 10:10:00"
+
+now=ymd_hms(now)
+
+weekdays(now)
+
+```
+
+
+
+
+
+

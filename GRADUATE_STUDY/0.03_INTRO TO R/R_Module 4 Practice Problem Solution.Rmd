@@ -1,0 +1,70 @@
+---
+title: "R_Module 4 Practice Problem 1"
+author: "DuraiSundaramoorthi"
+date: "7/15/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+Name = c("Sally", "Mike", "Carol") ## Creating a vector to store names
+
+Gender = c("F", "M", "F") ## Creating a vector to store gender
+
+TenK = c(55, 46, 62) ## Creating a vector to store TenK results
+
+PR = c(52, 44, 58) ## Creating a vector to store PR results
+
+Qualified = c(FALSE, TRUE, FALSE) ## Creating a vector to store qualification
+
+running = data.frame(Name, Gender, TenK, PR, Qualified) ## Creating a dataframe called running to combine the above vectors together
+
+running ## access the dataframe running
+
+running$HalfMarathon = c(120, 100, 140) ## adding a new column to the running dataframe
+
+running ## access the dataframe running
+
+newrunner = data.frame(Name = "Sage", Gender = "M", TenK = 40, PR = 42, Qualified = TRUE, HalfMarathon = 81) ## Creating a new dataframe
+
+running = rbind(running, newrunner) ## adding a new row to the running dataframe
+
+running
+```
+
+
+```{r}
+new_list = list(runif(10, -2, 2), matrix(1:10, 2, 5, byrow = TRUE), running) ## list: first member is a vector of length 10 from uniform distribution from -2 to 2; second member is a mtrix with 2 rows and 5 columns filled byrow; third member is the running dataframe.
+
+new_list ## access the list
+
+new_list[[1]] = new_list[[1]] + 2 ## add 2 to each element of the first member of the list
+
+sum(new_list[[2]]) ## add all elements of the second member of the list
+
+new_list[[3]] <- NULL ## remove third member of the list
+```
+
+
+```{r}
+mons = factor(c("March", "April", "January", "November", "January", "September","October", "September", "November", "August", "January", "November", "November","February", "May", "August", "July", "December", "August", "August", "September",
+"November", "February", "April"), levels = c("January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November","December"), ordered = TRUE)
+
+table(mons)
+
+factor_weight = cut(women$weight, 2, labels = c("Low", "High"))
+
+factor_weight
+
+table(factor_weight)
+
+```
