@@ -1,4 +1,4 @@
-# cp_GitNote
+# GitNote
 
 I used a few different types of markdown softwares such as gitnote, typora.
 Gitnote has a few syncing and signing in problems, so I chose to use typora on my mac.
