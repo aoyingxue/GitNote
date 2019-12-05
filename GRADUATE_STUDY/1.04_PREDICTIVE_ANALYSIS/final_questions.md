@@ -99,3 +99,51 @@
       1. Error correction
       2. Build small tree and predict, then have errors; on second tree you predict the error of the previous one
       3. Tune the size of the tree, usually take very small number of split; learning rate; tuning shrinkage value very important
+
+9. Module 9: SVM
+
+   1. Maximize the distance, the margin (objective)
+   2. Allow the budget and measure the violation, violation < budget (constraints)
+   3. Decision: orientation of the plane
+   4. Calculate dot products of x as a **kernel function**  (some form of dot products of x variables)
+   5. Kernel function:
+      1. linear
+      2. polynomial
+      3. Radial basis
+
+10. Module 10: neural network
+
+    1. Input layer:
+       1. Doesn't behave well if you have a lot of number of variables; not a problem in tree models; 
+          1. It's already highly non-linear; especially if there are a lot of variables
+       2. Not good for classifications; have to have nodes for each class
+    2. Update the weights
+
+11. Module 11: k-means clustering
+
+    1. Minimize sum of within-distance of each cluster
+
+12. Module 11: hierarchical clustering 
+
+    1. Dendrogram 
+    2. How to decide how to fuse: simple, complete, average linkage
+
+13. Module 12: PCA
+
+    1. Reduce the dimensions:
+       1. Create the new dimension (z): take a linear combination of all the variables 
+       2. Scale the variables with the mean of 0; Maximize the variance (a lot of spread of data, to preserve information) 
+          1. Constraint pi to make sure it would go to infinite
+          2. Green line is the new dimension (pi value telling you the direction)
+          3. Not multicollinearity 
+    2. Not working in real world business problem because you completely lose interpretation; you have to go back loadings to understand z
+    3. Useful if there are too many x variables with very little observations and you have to reduce the dimensions
+    4. Biplot (z1-z2)
+       1. Phi indicating directions 
+       2. Make it interpretable
+       3. If you have too many variables, you may need more than 2 components, biplot cannot see the whole picture
+    5. Screeplot 
+       1. PVE (proportion of variance explained)
+       2. CPVE
+    6. The number of components cannot exceed the number of variables
+
