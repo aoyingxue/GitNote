@@ -93,7 +93,7 @@
       2. One bagging tree is worse than the tree model because of overfitting
       3. But building many and averaging will <u>reduce variance</u> 
    2. Random forest
-      1. We dont use all variables, we only use subset of variables, decorrelatfe the trees; do not make several variables dominate
+      1. We don‘t use all variables, we only use subset of variables, decor-relate the trees; do not make several variables dominate
       2. Not better than bagging every time
    3. Boosted trees
       1. Error correction
@@ -146,4 +146,18 @@
        1. PVE (proportion of variance explained)
        2. CPVE
     6. The number of components cannot exceed the number of variables
+
+### Exam 
+
+1. Bring Calculator and simple algorithms
+   1. Neural network updating weights (one pass)
+   2. SVM
+2. Concept 
+3. No explanations of functions and codes
+4. Cheatsheet (3); handwritten
+   1. Name on top 
+   2. A4
+5. Only cover topics of mini B
+   1. But mean, standard deviation and basic things 
+   2. Only the level of in class quiz; problems at the back of the book
 
