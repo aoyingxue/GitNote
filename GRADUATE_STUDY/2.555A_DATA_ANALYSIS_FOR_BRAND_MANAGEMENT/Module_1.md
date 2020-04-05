@@ -193,7 +193,16 @@ Sign up for account
 ### Lab
 
 - 3 steps to calculate p, q, M
+
+  - ![image-20200226145814645](https://tva1.sinaimg.cn/large/0082zybpgy1gcahimydlej30bo066mxh.jpg)
+
 - 4 steps to forecast A(t-1), R(t), H(t), N(t)
+
+  - $R(t)=M-A(t-1)$
+
+    $H(t)=p+q\frac{A(t-1)}{M}$
+
+    $N(t)=H(t)*R(t)$ 
 
 ![image-20200113145644397](Module_1.assets/image-20200113145644397.png)
 

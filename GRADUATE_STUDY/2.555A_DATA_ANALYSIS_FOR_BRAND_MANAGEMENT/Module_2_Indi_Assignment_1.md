@@ -49,6 +49,7 @@
 
    ![image-20200122171258222](Module_2_Indi_Assignment_1.assets/image-20200122171258222.png)
 
-The eventual constant sales is round M/40. 
+**The eventual constant sales is round M/40.** 
 
 If there's no repeat customers, the eventual sales is 0. 
+

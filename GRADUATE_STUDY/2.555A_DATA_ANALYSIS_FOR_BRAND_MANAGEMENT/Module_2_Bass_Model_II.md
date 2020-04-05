@@ -1,4 +1,4 @@
-### 2.1 Quarterly Forecast vs. Yearly
+## 2.1 Quarterly Forecast vs. Yearly
 
 #### How do we forecast quarterly instead of yearly?
 
@@ -10,7 +10,7 @@ Quarterly aggregated forecast to get annually forecast would be discrepancy
 
 Monthly: divided by 12
 
-### 2.2 Product Analogs
+## 2.2 Product Analogs
 
 Parameters were precisely calculated for different analogs, so identifying analogs for products is important.  
 
@@ -31,7 +31,7 @@ Calculate the final p and q for these categories
 
 ![image-20200117101528763](Module_2_Bass_Model_II.assets/image-20200117101528763.png)
 
-### 2.4 No Analogs Case
+## 2.4 No Analogs Case
 
 **Estimate p**: from the top to the bottom
 
@@ -49,7 +49,7 @@ Just to make the new users easier but 3 steps are enough.
 
 ![image-20200117102536200](Module_2_Bass_Model_II.assets/image-20200117102536200.png)
 
-### 2.5 Market Potential Estimation
+## 2.5 Market Potential Estimation
 
 #### **Estimating M**: 
 
@@ -58,7 +58,7 @@ Just to make the new users easier but 3 steps are enough.
 
 ![image-20200117104448782](Module_2_Bass_Model_II.assets/image-20200117104448782.png)
 
-### 2.7 Real-World Examples
+## 2.7 Real-World Examples
 
 ##### Instagram’s worldwide monthly active users
 
@@ -109,23 +109,23 @@ Just to make the new users easier but 3 steps are enough.
 1. In order to forecast **brand sales**, bass model is necessary but not sufficient. It gives the answer of how many units of the product category would sell. But also need the answer of how much of the share would my brand take (<u>logistic</u> regression)
 2. ![image-20200117111431516](Module_2_Bass_Model_II.assets/image-20200117111431516.png)
 
-### 2.9 Accounting for Replacements in the Bass Model
+## 2.9 Accounting for Replacements in the Bass Model
 
 - ##### Product is never repeat purchased: Sales Curve is the Adoption Curve. (Very durable)
 
-  - Sales(t) = the number of adoptions for the first time (N(t))
+  - **Sales(t) = the number of adoptions for the first time (N(t))**
   - Sales curve is the same as the adoption
   - <img src="Module_2_Bass_Model_II.assets/image-20200117112021711.png" alt="image-20200117112021711" style="zoom:33%;" />
 
 - ##### Product repeat purchased in every period after adoption: How would the sales curve look?
 
   - Computer memory chip (intel): business rely on DRAM microprocessors 
-  - The ones who bought before will buy again, so sales(t)=A(t), already adoptions
+  - The ones who bought before will buy again, so **sales(t)=A(t)**, already adoptions
   - <img src="Module_2_Bass_Model_II.assets/image-20200117112354854.png" alt="image-20200117112354854" style="zoom:25%;" />
 
-> Think of a product that's intermediate between these two types of new products. It's a new product that is repeat purchased. It's not like washing machine, but it's not repeat purchased as fast as the DRAM chip. Now, what is such a product? Automobiles. In US, an average American  replaces their automobile once every ten years. So the replacement is every 10 periods. How do you predict sales? What would the curve look like? 
+> Think of a product that's intermediate between these two types of new products. It's a new product that is repeat purchased. It's not like washing machine, but it's not repeat purchased as fast as the DRAM chip. Now, what is such a product? Automobiles. In US, an average American replaces their automobile once every ten years. So the replacement is every 10 periods. How do you predict sales? What would the curve look like? 
 
-### 2.10 Motivating the Continuous Bass Model
+## 2.10 Motivating the Continuous Bass Model
 
 #### In discrete time (incorrect, easier to explain)
 
@@ -139,7 +139,7 @@ Just to make the new users easier but 3 steps are enough.
 
 Can be forecasted every second
 
-### 2.11 The Continuous Bass Model & How to Estimate p, q, M
+## 2.11 The Continuous Bass Model & How to Estimate p, q, M
 
 ![image-20200117114309890](Module_2_Bass_Model_II.assets/image-20200117114309890.png)
 
@@ -156,7 +156,7 @@ to minimize SSE
 
 > Bayesian updation (if have one year data but don't want to use analogical solution): based on one year of data and update it; use the second year data and update it again; and then in a few years, p, q, M stay steady. 
 
-### 2.12 Generalized Bass Model (GBM) 
+## 2.12 Generalized Bass Model (GBM) 
 
 ![image-20200117115207577](Module_2_Bass_Model_II.assets/image-20200117115207577.png)
 
@@ -174,15 +174,15 @@ In GBM, you will get the same adoption in period 2 as you would get in period 3 
 
 ![image-20200117120542747](Module_2_Bass_Model_II.assets/image-20200117120542747.png)
 
-b1<0: price sensitivity
+**b1<0: price sensitivity**
 
-b2>0: advertising sensitivity of consumers 
+**b2>0: advertising sensitivity of consumers** 
 
 ![image-20200117120746498](Module_2_Bass_Model_II.assets/image-20200117120746498.png)
 
 ----------------
 
-### Lab
+## Lab
 
 <img src="Module_2_Bass_Model_II.assets/image-20200117151344889.png" alt="image-20200117151344889" style="zoom:40%;" />
 
@@ -203,6 +203,7 @@ b2>0: advertising sensitivity of consumers
 
 <img src="Module_2_Bass_Model_II.assets/image-20200117152424505.png" alt="image-20200117152424505" style="zoom:40%;" />
 
-Price parameter is definitely negative
+**Price parameter is definitely negative**
 
-When making forecast, you have to determine next year's price before forecast N(t) because the price will affect the prediction. 
+When making forecast, you have to **determine next year's price** before forecast N(t) because the price will affect the prediction. 
+

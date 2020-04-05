@@ -75,11 +75,12 @@ The numbers are the **average** among the respondents. (0-10, similar to very di
 #### How to interpret
 
 - Rotate the graph doesn't change the meanings:
-  - The unique identifier is relative positions
+  - The unique identifier is **relative positions** 
   - Who your near competitors are
     - Cornell close to Columbia and Darthout (competitors)
 - x, y don't have labels; how do we figure the meanings of axis
   - Subjective interpretation: which one is better quality? which one is better value?
+  - Run 2 experiments, According to AR map and adjust the ratio and directions to fit as the OS map and then interpret
 
 ## Attribute Ratings Approach
 
@@ -193,15 +194,17 @@ Entry market - mass market (where most of the market actually lies) - luxury mar
 - **Clout** !!!
   -  The ability of stealing from other brands
   -  Row average
+  -  You could get it from running scan*pro model
 - **Vulnerability** !!!
   -  Column average
+  -  You could get it from running scan*pro model
 
 ### Switching Probabilities
 
 ![image-20200126232315695](Module_3_Perceptual_Maps.assets/image-20200126232315695.png)
 
 - Each <u>row</u> will add up to **100%** 
-  - Represents: given the certain brand that was bought last time, what is the conditional probability that a certain brand will be bought this time
+  - Represents: given the certain brand that was bought last time, what is the **conditional probability** that a certain brand will be bought this time
 - Each <u>diagonal</u> element is the largest number in its respective row
   - Represent **brand loyalties** 
 - Off diagonal elements:
@@ -232,3 +235,4 @@ Block design (how to survey a lot of questions about a lot of brands with limite
 Respondents will only answer a set of questions and the questions of different brands are exposed with the same probability.
 
 > Programming solution: Marketing engineering
+
