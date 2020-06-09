@@ -1,0 +1,6 @@
+- Identification of relevant facts and issues
+- Accurate identification of the root cause
+- Development of alternative solutions (where appropriate) and discussion of the advantages/disadvantages of those alternatives.
+- Recommendation of a solution/solutions to resolve the identified root cause; identification of the human resources (HR) and financial concerns relevant to the recommended solution.
+- How data analytics capabilities were used, or could have been used
+- Cyber security lessons learned.

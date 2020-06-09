@@ -33,12 +33,12 @@
 ### Why do feature selection?
 
 - To find terms that help discriminate between classification categories
-- Text data:
+- High-dimensional and high computations:
   - Come from <u>heterogeneous</u> sources (e.g., different authors for social media posts)
   - Sparse
   - High-dimensional (too many features to begin with)
     - Only a small subset of original features will be used for prediction
-    - With too many features and not much data - overfit
+- With too many features and not much data - **overfit** and less accurate (same with numerical data)
 
 <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdjblgqqa8j30qk07waar.jpg" alt="image-20200405104347413" style="zoom:50%;" />
 
@@ -102,13 +102,28 @@ Determine if term j does a good job discriminating between categories
 
 - Entropy also measures our surprise, or our certainty, in the outcome of a random variable. High entropy means low certainty. 
 
+  ![image-20200405162309956](https://tva1.sinaimg.cn/large/00831rSTgy1gdjleixzsvj30ka0betdz.jpg)
+
+- we see how the term 'advertising' being associated with marketing, but not with finance, leads to low entropy for categories, both for documents containing the term 'advertising' and not containing the word 'advertising'. Now, we can conclude that 'advertising' can be a good predictive feature in our model, and the good predictive feature splits the data into sets which display low entropy for categories, 
+
+- **Low entropy for containing the word and not = good predictive feature** 
+
 ### Conditional Entropy for Term j
 
-$E(j) = ∑_{h=j,−j} [fh*\{ -P(1|h)*log P(1|h) -...- P(k|h)*logP(k|h)\}]$ 
+- We have r = 1, ..., k categories
+- Fractions of all documents that contain and do not term j: fj and f-j
+- Fraction of documents that belong to category *r:*
+  - out of documents that contain term j: P(r|j)
+  - out of documents that don’t contain term j: P(r|-j)
+
+$E(j) = ∑_{h=j,−j} [f_h*\{ -P(1|h)*log P(1|h) -...- P(k|h)*logP(k|h)\}]$ 
+
+> $∑_{h=j,−j}$ fractions of the documents with and without term j.
 
 - Conditional entropy measures how the presence or absence of term j affects our certainty of being able to determine the class label
   - For perfectly discriminating term j, E(j) = 0
   - If term j is not discriminating at all, E(j)= log(k)
+- We prefer terms with **lower** conditional entropy. Low value indicates better **discriminating** power for term j 
 
 ## $χ^2-Statistic$ 
 
@@ -121,11 +136,7 @@ $E(j) = ∑_{h=j,−j} [fh*\{ -P(1|h)*log P(1|h) -...- P(k|h)*logP(k|h)\}]$
 
 <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdjc1ecszzj30i608e3zg.jpg" alt="image-20200405105910509" style="zoom:50%;" />
 
-### What is the observed and expected co-occurrences of term *j* and the category *r*?
-
-- Number of documents = 1,000
-- 10% of the documents belong to category *r =* Marketing
-- Term *j =* Advertising is present in 20% of documents
+### What is the <u>observed</u> and <u>expected</u> co-occurrences of term *j* and the category *r*?
 
 <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdjc2e8bkpj30ie08k0tt.jpg" alt="image-20200405110008089" style="zoom:50%;" />
 
@@ -133,10 +144,12 @@ $E(j) = ∑_{h=j,−j} [fh*\{ -P(1|h)*log P(1|h) -...- P(k|h)*logP(k|h)\}]$
 
 <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdjc40rzu3j30aq07e3yu.jpg" alt="image-20200405110142160" style="zoom:50%;" />
 
-- What does it mean when the observed co- occurrence is different from the expected one?
-- It can signal that term *j* and category *k* are not independent:
+#### What does it mean when the observed co-occurrence is different from the expected one?
+
+- It can signal that term *j* and category *k* are <u>not independent</u>:
   - that is term *j* is predictive of category k
-- Χ2-statistic measures the strength of relationship between term j and category k
+- Χ2-statistic measures the **strength of relationship** between term j and category k
+- You can compute the chi-squared statistic for all the terms in your corpus vocabulary, rank the terms, and use the terms with the highest values of chi-squared statistic for your classification model. 
 
 <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdjc56x5gnj30v00d0dig.jpg" alt="image-20200405110247481" style="zoom:50%;" />
 

@@ -67,7 +67,7 @@ We want $p1 = p0$, so q1 /q0 = (p0 -c)/(p1 -c)
 
 Since <u>p1 = (1-r) p0</u>, 
 **q1 /q0 =m/(m-r)** (changed sales divided by original sales must be at least as large as that right-hand side.)
-where m=(p0 –c)/p0 (**percentage margin**)
+where price margin m=(p0 –c)/p0 (**percentage margin**)
 
 ### <u>What is the key implication of this formula?</u>
 
